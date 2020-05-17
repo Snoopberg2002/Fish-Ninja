@@ -1,0 +1,41 @@
+main {
+    display: grid;
+    grid-template: repeat(9, 1fr) / repeat(12, 1fr);
+    background-color: #00274C;
+    }
+
+#one {
+    grid-area: 1/1/span 3/span 3;
+    height: 250px;
+    width: auto;
+}
+
+#two {
+    grid-area: 1/10/span 3/span 3;
+    height: 250px;
+    width: auto;
+}
+
+#three {
+    grid-area: 7/1/span 3/span 3;
+    height: 250px;
+    width: auto;
+}
+
+#four {
+    grid-area: 7/10/span 3/span 3;
+    height: 250px;
+    width: auto;
+}
+
+h1 {
+    color: #fff05A;
+    grid-area: 2/6/span 1/span 2;
+    justify-self: center;
+}
+
+h3 {
+    grid-area: 3/4/span 8/span 6;
+    color: #FFF05A;
+    justify-self: center;
+}
