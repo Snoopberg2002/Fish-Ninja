@@ -1,8 +1,6 @@
 const techniques = {
     bluegill: {
-        winter: `Recommended:<br>Lures:  Small Spinners, Micro Crank Baits<br>Baits: Worms<br>Areas to Target: Deeper Areas with Points, Bends, Flats near drop-offs with remaining plant life<br>Techniques:  Target areas just outside weed beds, change colors and larvae if not finding success`,
-        
-        // "Bluegill will migrate to deeper waters as the vegetation in shallower areas dies off.  Finding remaining plant life around points, bends, and flats near drop-offs will lead to greater numbers of fish.  Focus on the deeper end of the depth range during ice-over conditions.  Use ice jigs tipped with wax worms or other larvae and try either traditional jigging or placing it under a bobber.  Target the areas just above or outside of the weed beds.  When not finding sufficient action, try different combinations of colors and larvae, along with changing locations, until desired result is achieved.  Keeping the larvae fresh may also lead to greater success.",
+        winter: "Bluegill will migrate to deeper waters as the vegetation in shallower areas dies off.  Finding remaining plant life around points, bends, and flats near drop-offs will lead to greater numbers of fish.  Focus on the deeper end of the depth range during ice-over conditions.  Use ice jigs tipped with wax worms or other larvae and try either traditional jigging or placing it under a bobber.  Target the areas just above or outside of the weed beds.  When not finding sufficient action, try different combinations of colors and larvae, along with changing locations, until desired result is achieved.  Keeping the larvae fresh may also lead to greater success.",
 
         spring: "Protected inlets or coves that contain warm/shallow water and suitable spawning habitats will become the primary areas to focus on.  Stick to shorelines where emerging weeds provide suitable hunting grounds, cover from sunlight, and protection from predators.  Bluegill are schooling fish, so in the event that activity is minimal, move to other areas that may consist of similar conditions.  Larger fish may congregate near areas with easy access to deeper water.  Small spinners, micro crank baits and hair jigs tipped with night crawler pieces are good options in addition to the larvae tipped ice jigs.  Small minnows could also lead to larger fish.  Slow retrieval is often the most effective approach.  If fly fishing is the preferred method, poppers and nymphs may also lead to success.",
 
@@ -91,9 +89,18 @@ const techniques = {
 let species = document.getElementById("species");
 let seasons = document.getElementById("season");
 let par = document.querySelector("p");
+let background = document.querySelector(".tipsMain");
+let bluegill = "https://i.imgur.com/4i6DkKG.jpg";
+
+let tipsImages = [bluegill]
 
 document.getElementById("select").addEventListener("click", event => {
     event.preventDefault();
     let choice1 = techniques[species.value];
     par.textContent = choice1[seasons.value];
+    tipsImages.forEach(el => {
+        if (species.value === el) {
+            background.style.background-image = `url("${el}")`;
+        }
+    })
     });

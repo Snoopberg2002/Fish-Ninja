@@ -36,8 +36,13 @@ function initMap() {
     }
     let map = new google.maps.Map(document.getElementById("nebMap"), options);
 
-    //Add Markers
+    //Add Data Layer
     map.data.loadGeoJson("Nebraska.json");
+    map.data.setStyle({clickable: true});
+
+    map.data.addListener('click', function(event) {
+        console.log(map.data.i.i);
+     });
 
     //Add info windows
     // let info = new google.maps.InfoWindow({
@@ -46,6 +51,8 @@ function initMap() {
 
     // map.data.info;
 }
+
+
 
 // //New York
 // function initMap() {

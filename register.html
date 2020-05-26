@@ -4,44 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Page</title>
-    <link href="register.css" type="text/css" rel="stylesheet">
+    <link href="./index.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <main>
-        <form>
-            <label for="homeCity">Home City:</label>
-            <input type="text" name="homeCity" id="homeCity">
-            <br>
-            <br>
-
-            <label for="homeState">Home State:</label>
-            <input type="text" name="homeState" id="homeState">
-            <br>
-            <br>
-            <label for="favLake">Favorite Lake:</label>
-            <input type="text" name="favLake" id="favLake">
-            <br>
-            <br>
-            <label for="email">Email Address:</label>
-            <input type="email" name="email" id="email" placeholder="user@anyEmail.com">
-            <br>
-            <br>
-
-            <label for="userName">Username:</label>
-            <input type="text" name="userName" id="userName">
-            <br>
-            <h5>Password must be at least 8 characters with at least one number.</h5>
-            <label for="pass">Password:</label>
-            <input type="password" name="pass" id="pass">
-            <br>
-            <br>
-            <label for="verPass">Verify Password:</label>
-            <input type="password" name="verPass" id="verPass">
-            <br>
-            <br>
-
-            <input type="submit" value="Register" id="register">
-        </form>
+        <section class="registerMain">
+            <form id="registerForm">
+                <label class="registerEls" for="homeCity">Home City:</label>
+                <input type="text" name="homeCity" class="registerEls" id="homeCity">
+                <br>
+                <label class="registerEls" for="homeState">Home State:</label>
+                <input type="text" name="homeState" class="registerEls" id="homeState">
+                <br>
+                <label class="registerEls" for="favLake">Favorite Lake:</label>
+                <input type="text" name="favLake" class="registerEls" id="favLake">
+                <br>
+                <label class="registerEls" for="email">Email Address:</label>
+                <input type="email" name="email" class="registerEls" id="email" placeholder="user@anyEmail.com">
+                <br>
+                <label class="registerEls" for="userName">Username:</label>
+                <input type="text" name="userName" class="registerEls" id="userName">
+                <h5 class="registerEls">Password must be at least 8 characters with at least one number.</h5>
+                <br>
+                <label class="registerEls" for="pass">Password:</label>
+                <input type="password" name="pass" class="registerEls" id="pass">
+                <br>
+                <label class="registerEls" for="verPass">Verify Password:</label>
+                <input type="password" name="verPass" class="registerEls" id="verPass">
+                <br>
+                <input type="submit" value="Register" class="registerEls" id="register">
+            </form>
+        </section>
     </main>    
+    <script src="./register.js"></script>
 </body>
 </html>
